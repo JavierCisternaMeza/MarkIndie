@@ -1,0 +1,42 @@
+#sidebar {
+    position: fixed;
+    top: 56px;
+    left: -250px;
+    bottom: 0;
+    width: 250px;
+    padding-top: 1rem;
+    padding-left: 0;
+    overflow-x: hidden;
+    transition: all 0.3s;
+  }
+  
+  #sidebar.show {
+    left: 0;
+  }
+
+.nav-link {
+  color: black;
+
+}
+
+.nav-link:hover {
+  color: #FFCD7A;
+}
+
+.navbar{
+    background-color: #FFEFD4;
+    color: #FFEFD4;
+}
+
+.carousel-item {
+  transition: transform 0.5s ease-in-out;
+}
+
+.navbar .form-control {
+    min-width: 200px;
+    max-width: 800px;
+}
+
+#carouselExampleIndicators{
+    min-width: 375;
+}
