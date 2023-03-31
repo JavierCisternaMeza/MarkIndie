@@ -8,80 +8,122 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- incorporamos jquery  -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
-    <!--NavBar Superior-->
-    <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="img/LogoMarkIndie.png" alt="Logo" width="100" height="60" class="d-inline-block align-text-top">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Acerca de</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Servicios</a>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
-            <ul class="navbar-nav align-content-end">
-                <li class="nav-item active">
-                    <a class="nav-link" href="pages/registro_inicio.html"> Registrar / Iniciar Sesion</a>
-                </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
 
-    <!-- Agregar la estructura HTML del carrusel -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="img/Carrousel Ejemplo/Imagen 1600x400.webp" alt="Primera imagen">
+<!-- NavBar -->
+
+  <nav class="content navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html"><img class="logo" src="img/LogoMarkIndie.png" alt=""></a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="navbar-collapse collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="home nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="reg nav-item">
+          <a class="nav-link" href="pages/registro.html">Registrar</a>
+        </li>
+        <li class="log nav-item">
+          <a class="nav-link" href="pages/logIn.html">Iniciar Sesion</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="bar form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  
+
+  <!-- Carrusel -->
+  <div id="carouselExampleIndicators" class="content carousel slide" data-ride="carousel" data-interval="5000">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="img/Carrousel Ejemplo/Imagen 1600x400.webp" alt="Primera imagen">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="img/Carrousel Ejemplo/Imagen 1600x400.webp" alt="Segunda imagen">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="img/Carrousel Ejemplo/Imagen 1600x400.webp" alt="Tercera imagen">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Siguiente</span>
+    </a>
+  </div>
+
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-10 order-2 order-lg-1">
+        <div class="row">
+          <div class="col-6 col-sm-4 col-md-3 pageGame_item">
+            <a href="pages/pantallaJuego.html">Game_Miniature_Slot</a>
           </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="img/Carrousel Ejemplo/Imagen 1600x400.webp" alt="Segunda imagen">
+          <div class="col-6 col-sm-4 col-md-3 pageGame_item">
+            <a href="pages/pantallaJuego.html">Game_Miniature_Slot</a>
           </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="img/Carrousel Ejemplo/Imagen 1600x400.webp" alt="Tercera imagen">
+          <div class="col-6 col-sm-4 col-md-3 pageGame_item">
+            <a href="pages/pantallaJuego.html">Game_Miniature_Slot</a>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 pageGame_item">
+            <a href="pages/pantallaJuego.html">Game_Miniature_Slot</a>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 pageGame_item">
+            <a href="pages/pantallaJuego.html">Game_Miniature_Slot</a>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 pageGame_item">
+            <a href="pages/pantallaJuego.html">Game_Miniature_Slot</a>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 pageGame_item">
+            <a href="pages/pantallaJuego.html">Game_Miniature_Slot</a>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 pageGame_item">
+            <a href="pages/pantallaJuego.html">Game_Miniature_Slot</a>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 pageGame_item">
+            <a href="pages/pantallaJuego.html">Game_Miniature_Slot</a>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Siguiente</span>
-        </a>
       </div>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <div class="content card">
+      <div class="card-body">
+        <div class="justify-content-start">
+          <img class="logo-foot" src="img/LogoMarkIndie.png" alt="">
+        </div>
+        <a href="#">Contactanos</a>
+        <div>
+          Creadores:
+          Javier Cisterna
+        </div>
+      </div>
+    </div>
+  </footer>
+
   
-  <script src="js/index.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-</body>
-</html>
-
-
 
 </body>
 </html>

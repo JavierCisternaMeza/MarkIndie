@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Cuenta</title>
+  
+  <!-- CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="../css/styleRegister.css">
+  
+</head>
+<body>
+  <!-- NavBar -->
+
+  <nav class="container navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html"><img class="logo" src="../img/LogoMarkIndie.png" alt=""></a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="navbar-collapse collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="home nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="reg nav-item">
+          <a class="nav-link" href="../pages/registro.html">Registrar</a>
+        </li>
+        <li class="log nav-item">
+          <a class="nav-link" href="../pages/logIn.html">Iniciar Sesion</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <form>
+          <h2 class="text-center mb-4">Registro de Cuenta</h2>
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre completo">
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico">
+          </div>
+          <div class="form-group">
+            <label for="contraseña">Contraseña</label>
+            <input type="password" class="form-control" id="contraseña" placeholder="Ingresa tu contraseña">
+          </div>
+          <div class="form-group">
+            <label for="conf-contraseña">Confirmar Contraseña</label>
+            <input type="password" class="form-control" id="conf-contraseña" placeholder="Confirma tu contraseña">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container card">
+      <div class="card-body">
+        <div class="justify-content-start">
+          <img class="logo-foot" src="../img/LogoMarkIndie.png" alt="">
+        </div>
+        <a href="#">Contactanos</a>
+        <div>
+          Creadores:
+          Javier Cisterna
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Local -->
+  <script src="../js/JSRegister.js"></script>
+  
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/XpNcZ6Tp75muN7J" crossorigin="anonymous"></script>
+  
+  <!-- JS de Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+</body>
+</html>

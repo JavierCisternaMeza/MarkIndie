@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Log In</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styleRegister.css">
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <!-- NavBar -->
+
+    <nav class="container navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../index.html"><img class="logo" src="../img/LogoMarkIndie.png" alt=""></a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="navbar-collapse collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="home nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="reg nav-item">
+            <a class="nav-link" href="../pages/registro.html">Registrar</a>
+          </li>
+          <li class="log nav-item">
+            <a class="nav-link" href="../pages/logIn.html">Iniciar Sesion</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+
+  <div class="container">
+    <h1>Log In</h1>
+    <form>
+      <div class="form-group">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" name="correo" placeholder="Ingresa tu correo electrónico">
+      </div>
+      <div class="form-group">
+        <label for="contraseña">Contraseña</label>
+        <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Ingresa tu contraseña">
+      </div>
+      <button type="submit" class="btn btn-primary">Log In</button>
+    </form>
+  </div>
+  
+  <footer>
+    <div class="container card">
+      <div class="card-body">
+        <div class="justify-content-start">
+          <img class="logo-foot" src="../img/LogoMarkIndie.png" alt="">
+        </div>
+        <a href="#">Contactanos</a>
+        <div>
+          Creadores:
+          Javier Cisterna
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="../js/validacion.js"></script>
+</body>
+</html>
