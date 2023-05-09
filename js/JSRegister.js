@@ -1,49 +1,50 @@
 $(document).ready(function() {
-	// Accedemos al formulario de registro y agregamos un evento submit
-	$("form").submit(function(event) {
-	  // Prevenimos que el formulario se envíe por defecto
-	  event.preventDefault();
-	  
-	  // Accedemos a los valores ingresados por el usuario
-	  var nombre = $("#nombre").val();
-	  var correo = $("#correo").val();
-	  var contraseña = $("#contraseña").val();
-	  var confContraseña = $("#conf-contraseña").val();
-	  
-	  // Verificamos que el nombre no esté vacío
-	  if (nombre.trim() == "") {
-		alert("Por favor ingresa tu nombre completo.");
-		return false;
+	$('#myForm').validate({
+	  rules: {
+		name: 'required',
+		email: {
+		  required: true,
+		  email: true
+		},
+		confirmEmail: {
+		  required: true,
+		  email: true,
+		  equalTo: '#email'
+		},
+		password: 'required',
+		confirmPassword: {
+		  required: true,
+		  equalTo: '#password'
+		}
+	  },
+	  messages: {
+		name: 'Por favor ingrese su nombre.',
+		email: {
+		  required: 'Por favor ingrese su correo electrónico.',
+		  email: 'Por favor ingrese una dirección de correo electrónico válida.'
+		},
+		confirmEmail: {
+		  required: 'Por favor confirme su correo electrónico.',
+		  email: 'Por favor ingrese una dirección de correo electrónico válida.',
+		  equalTo: 'Los correos electrónicos no coinciden.'
+		},
+		password: 'Por favor ingrese su contraseña.',
+		confirmPassword: {
+		  required: 'Por favor confirme su contraseña.',
+		  equalTo: 'Las contraseñas no coinciden.'
+		}
+	  },
+	  errorElement: 'div',
+	  errorPlacement: function(error, element) {
+		error.addClass('invalid-feedback');
+		element.closest('.form-group').append(error);
+	  },
+	  highlight: function(element, errorClass, validClass) {
+		$(element).addClass('is-invalid');
+	  },
+	  unhighlight: function(element, errorClass, validClass) {
+		$(element).removeClass('is-invalid');
 	  }
-	  
-	  // Verificamos que el correo sea válido
-	  if (!validarCorreo(correo)) {
-		alert("Por favor ingresa un correo electrónico válido.");
-		return false;
-	  }
-	  
-	  // Verificamos que la contraseña tenga al menos 6 caracteres
-	  if (contraseña.length < 6) {
-		alert("Por favor ingresa una contraseña con al menos 6 caracteres.");
-		return false;
-	  }
-	  
-	  // Verificamos que la confirmación de contraseña sea igual a la contraseña
-	  if (contraseña != confContraseña) {
-		alert("Las contraseñas no coinciden, por favor ingrésalas de nuevo.");
-		return false;
-	  }
-	  
-	  // Si todas las validaciones pasaron, enviamos el formulario
-	  alert("Registro exitoso!");
-	  $("form")[0].reset();
-	  return true;
 	});
   });
-  
-  // Función para validar el correo electrónico
-  function validarCorreo(correo) {
-	var expresionRegular = /\S+@\S+\.\S+/;
-	return expresionRegular.test(correo);
-  }
   

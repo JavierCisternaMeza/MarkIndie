@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Registro de Cuenta</title>
@@ -9,6 +9,8 @@
   
   <!-- JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
   <!-- CSS personalizado -->
   <link rel="stylesheet" href="../css/styleRegister.css">
@@ -42,25 +44,33 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 mx-auto">
-        <form>
-          <h2 class="text-center mb-4">Registro de Cuenta</h2>
+        <form id="myForm" class="needs-validation" novalidate>
           <div class="form-group">
-            <label for="nombre">Nombre completo</label>
-            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre completo">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+            <div class="invalid-feedback"></div>
           </div>
           <div class="form-group">
-            <label for="correo">Correo electrónico</label>
-            <input type="email" class="form-control" id="correo" placeholder="Ingresa tu correo electrónico">
+            <label for="email">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="invalid-feedback"></div>
           </div>
           <div class="form-group">
-            <label for="contraseña">Contraseña</label>
-            <input type="password" class="form-control" id="contraseña" placeholder="Ingresa tu contraseña">
+            <label for="confirmEmail">Confirmar correo electrónico</label>
+            <input type="email" class="form-control" id="confirmEmail" name="confirmEmail" required>
+            <div class="invalid-feedback"></div>
           </div>
           <div class="form-group">
-            <label for="conf-contraseña">Confirmar Contraseña</label>
-            <input type="password" class="form-control" id="conf-contraseña" placeholder="Confirma tu contraseña">
+            <label for="password">Contraseña</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+            <div class="invalid-feedback"></div>
           </div>
-          <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+          <div class="form-group">
+            <label for="confirmPassword">Confirmar contraseña</label>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+            <div class="invalid-feedback"></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
       </div>
     </div>
@@ -87,6 +97,8 @@
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/XpNcZ6Tp75muN7J" crossorigin="anonymous"></script>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/localization/messages_es.min.js" integrity="sha512-v0vjOquuhHQslRkq1a5BwUIyKSD7ZbgFfQv4jzSBGwbIVTCOs5JQdotZVoRjPRzb9UToTvuP2kdR5CVE4TLgMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <!-- JS de Bootstrap -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   
