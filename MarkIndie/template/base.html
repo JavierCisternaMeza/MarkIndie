@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Place Indie</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/styleRegister.css' %}">
+  <!-- incorporamos jquery  -->
+</head>
+<body>
+  <!-- NavBar -->
+<nav class="content navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'home' %}"><img class="logo" src="{% static 'img/LogoMarkIndie.png' %}" alt=""></a>
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="home nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      {% if user.is_authenticated %}
+        {% if user.is_developer %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'registrar_juego' %}">Registrar Juego</a> 
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'mis_juegos' %}">Ver Juegos</a>
+        </li>
+        {% endif %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
+        </li>
+      {% else %}
+        <li class="reg nav-item">
+          <a class="nav-link" href="{% url 'registro' %}">Registrar</a>
+        </li>
+        <li class="log nav-item">
+          <a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
+        </li>
+      {% endif %}
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="bar form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+  {% block content %}
+  {% endblock %}
+
+  <!-- Footer -->
+  <footer>
+    <div class="content card">
+      <div class="card-body">
+        <div class="justify-content-start">
+          <img class="logo-foot" src="{% static 'img/LogoMarkIndie.png' %}" alt="">
+        </div>
+        <a href="#">Contactanos</a>
+        <div>
+          Creadores:
+          Javier Cisterna
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/formScript.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>Registrar Cuenta</h1>
+  <form method="POST" id="signupForm">
+    {% csrf_token %}
+    {{ form.username.label_tag }} {{ form.username }}<br>
+    {{ form.password1.label_tag }} {{ form.password1 }}<br>
+    {{ form.password2.label_tag }} {{ form.password2 }}<br>
+    {{ form.email.label_tag }} {{ form.email }}<br>
+    {{ form.is_developer.label_tag }} {{ form.is_developer }}<br>
+    <div id="developerFields">
+      {{ form.full_name.label_tag }} {{ form.full_name }}<br>
+      {{ form.phone_number.label_tag }} {{ form.phone_number }}<br>
+    </div>
+    <button type="submit">Registrarse</button>
+  </form>
+</div>
+{% endblock %}
