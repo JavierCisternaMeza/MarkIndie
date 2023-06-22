@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <h2>Mis Juegos</h2>
+
+  <a href="{% url 'registrar_juego' %}" class="btn btn-primary">Crear Juego</a>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for juego in juegos %}
+        <tr>
+          <td>{{ juego.nombre }}</td>
+          <td>
+            <a href="{% url 'Editar_Juego' juego.codigo %}"class="btn btn-sm btn-primary">Editar</a>
+            <a href="{% url 'Borrar_Juego' juego.codigo %}"class="btn btn-sm btn-danger">Borrar</a>
+          </td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="2">No tienes juegos creados.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>{{ juego.nombre }}</h2>
+  <!-- No puedo mostrar los tags por que estoy pendejo y separe todo en la base de datos :,( -->
+  <!-- <h2>{{ juego.tags }}</h2> -->
+  <p>Precio: {{ juego.precio }}</p>
+  {% if juego.precio == 0 %}
+    <a href="#" class="btn btn-primary">Descargar</a>
+  {% else %}
+    <a href="#" class="btn btn-primary">Comprar</a>
+  {% endif %}
+  <!-- Aquí puedes mostrar más detalles del juego si lo deseas -->
+{% endblock %}
